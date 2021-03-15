@@ -1,0 +1,42 @@
+{% extends "layout.njk" %} 
+
+{% block head %}
+
+<title>Rodney Mullen | Videos</title>
+
+{% endblock %}
+
+{% block content %}
+
+<div id="wrapper">
+    <h1>Videos</h1>
+</div>
+
+<section class="cards">
+
+    {% for item in items %}
+    <div class="card" id="{{item.id}}">
+        <div class="card__image-container {{ 'featured-wrapper' if item.featured }}">
+            <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}" />
+            {% if item.featured %}
+                <div class="featured">Featured</div>
+            {% endif %}
+        </div>
+        <div class="card__content">
+            <p>{{item.title}}</p>
+        </div>
+        <div class="card__info">
+            <p>{{item.time}}</p>
+            <p class="card__price">{{item.watch}}</p>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="space"></div>
+</section>
+
+<footer class="copyright">
+    <p>&copy; <span class="date"></span> - Ted Martins</p>
+</footer>
+<script src="./assets/js/modal.js"></script>
+{% endblock %}

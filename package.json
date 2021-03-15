@@ -1,0 +1,18 @@
+{
+  "name": "RodneyMullen_FanPage",
+  "version": "0.0.1",
+  "description": "Just a simple fanpage in honor of this great inventor!",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Ted Martins",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.3",
+    "vercel": "^21.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
